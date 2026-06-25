@@ -1,0 +1,86 @@
+.hero {
+  padding-top: 90px;
+}
+
+.name {
+  font-size: clamp(2.4rem, 5vw, 3.4rem);
+  line-height: 1.05;
+  margin-bottom: 12px;
+}
+
+.role {
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+  margin-bottom: 28px;
+  max-width: 680px;
+}
+
+.bio {
+  max-width: 700px;
+  color: var(--ink-soft);
+  margin-bottom: 36px;
+}
+
+.links {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+
+.links a {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  border: 1px solid var(--ink);
+  padding: 7px 14px;
+  border-radius: 2px;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.links a:hover {
+  background: var(--ink);
+  color: var(--white);
+}
+
+.ledger {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
+
+.ledgerItem {
+  flex: 1;
+  min-width: 140px;
+  padding: 18px 22px;
+  border-right: 1px solid var(--line);
+}
+
+.ledgerItem:last-child {
+  border-right: none;
+}
+
+.ledgerNum {
+  font-family: var(--font-mono);
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--clay);
+  display: block;
+}
+
+.ledgerLabel {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 600px) {
+  .ledgerItem {
+    flex: 1 1 50%;
+    border-bottom: 1px solid var(--line);
+    border-right: none;
+  }
+}

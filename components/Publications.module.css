@@ -1,0 +1,23 @@
+.group {
+  margin-bottom: 32px;
+}
+
+.groupTitle {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+  font-weight: 500;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+}
+
+.item {
+  margin-bottom: 14px;
+  font-size: 0.94rem;
+  padding-left: 18px;
+  border-left: 2px solid var(--paper-deep);
+  color: var(--ink);
+}

@@ -1,0 +1,60 @@
+.block {
+  margin-bottom: 30px;
+}
+
+.subhead {
+  font-size: 0.85rem;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  color: var(--ink-soft);
+  margin-bottom: 14px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: 7px 13px;
+  border-radius: 2px;
+  color: var(--ink);
+}
+
+.langRow {
+  max-width: 480px;
+  margin-bottom: 16px;
+}
+
+.langTop {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.92rem;
+  margin-bottom: 6px;
+}
+
+.langLevel {
+  font-family: var(--font-mono);
+  color: var(--clay);
+  font-size: 0.8rem;
+}
+
+.barTrack {
+  height: 6px;
+  background: var(--paper-deep);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  background: var(--clay);
+  border-radius: 3px;
+}

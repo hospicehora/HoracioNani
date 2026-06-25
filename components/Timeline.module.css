@@ -1,0 +1,76 @@
+.timeline {
+  border-left: 2px solid var(--line);
+  margin-left: 6px;
+  padding-left: 28px;
+}
+
+.item {
+  position: relative;
+  padding-bottom: 26px;
+}
+
+.item:last-child {
+  padding-bottom: 0;
+}
+
+.item::before {
+  content: "";
+  position: absolute;
+  left: -34px;
+  top: 5px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--clay);
+  border: 2px solid var(--paper);
+  box-shadow: 0 0 0 1px var(--clay);
+}
+
+.date {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.org {
+  font-weight: 600;
+  margin: 2px 0 2px 0;
+  font-size: 1rem;
+  font-family: var(--font-body);
+}
+
+.role {
+  font-style: italic;
+  color: var(--ink-soft);
+  margin-bottom: 4px;
+  font-size: 0.92rem;
+}
+
+.desc {
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+}
+
+.more {
+  margin-top: 32px;
+}
+
+.more summary {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--clay);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  list-style: none;
+}
+
+.more summary::-webkit-details-marker {
+  display: none;
+}
+
+.more[open] summary {
+  margin-bottom: 18px;
+}
