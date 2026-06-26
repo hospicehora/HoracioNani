@@ -12,7 +12,7 @@ export const profile = {
   phone: "+229 01 68 16 66 52",
   phoneAlt: "+229 01 96 50 61 98",
   nationality: "Béninoise",
-  bio: `Titulaire d'un Master Recherche en Économie de l'Université d'Abomey-Calavi, je conjugue rigueur académique et expérience opérationnelle de terrain. Depuis 2019, j'ai collaboré avec des institutions nationales et internationales sur des projets touchant à l'autonomisation économique des femmes et des jeunes, l'inclusion financière, la sécurité alimentaire, la santé publique et le changement climatique. Je conçois des outils de collecte, coordonne des enquêtes de terrain, forme des équipes et rédige des rapports d'évaluation — avec une attention constante à la qualité des données et à la rigueur méthodologique.`,
+  bio: `Titulaire d'un Master Recherche en Économie de l'Université d'Abomey-Calavi, je conjugue rigueur académique et expérience opérationnelle de terrain. Depuis 2019, j'ai collaboré avec des institutions nationales et internationales sur des projets touchant à l'autonomisation économique des femmes et des jeunes, l'inclusion financière, la sécurité alimentaire, la santé publique et le changement climatique. Je conçois des outils de collecte, coordonne des enquêtes de terrain, forme des équipes et rédige des rapports d'évaluation, avec une attention constante à la qualité des données et à la rigueur méthodologique.`,
 };
 
 export const stats = [
