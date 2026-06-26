@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from "./Hero.module.css";
 import { profile, stats } from "@/data/profile";
 
@@ -6,6 +7,15 @@ export default function Hero() {
     <section id="accueil" className={`section ${styles.hero}`}>
       <div className="section-inner">
         <p className="eyebrow">Profil</p>
+        <div className={styles.photo}>
+          <Image
+            src="/Horacio_NANI.png"
+            alt="Horacio NANI"
+            width={150}
+            height={150}
+            priority
+          />
+        </div>
         <h1 className={styles.name}>{profile.name}</h1>
         <p className={styles.role}>{profile.tagline}</p>
         <p className={styles.bio}>{profile.bio}</p>

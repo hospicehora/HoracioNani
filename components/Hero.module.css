@@ -2,6 +2,16 @@
   padding-top: 90px;
 }
 
+.photo {
+  margin-bottom: 28px;
+}
+
+.photo img {
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--clay);
+}
+
 .name {
   font-size: clamp(2.4rem, 5vw, 3.4rem);
   line-height: 1.05;
