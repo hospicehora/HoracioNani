@@ -85,37 +85,37 @@ export const featuredExperience = [
   {
     period: "10/2025 – 01/2026",
     org: "BEATA CONSULT-Ingénieurs Conseils",
-    role: "Consultant Associé — Étude socio-économique",
+    role: "Consultant Associé - Étude socio-économique",
     desc: "Faisabilité de la réhabilitation des complexes karité dans trois pôles de production.",
   },
   {
     period: "04/2025 – 05/2025",
     org: "Conférence Internationale sur la Planification Familiale (ICFP) 2025",
-    role: "Réviseur de résumés — Comité scientifique",
+    role: "Réviseur de résumés - Comité scientifique",
     desc: "Évaluation par les pairs des résumés scientifiques soumis à l'édition 2025.",
   },
   {
     period: "2024 – 2025",
     org: "Social Watch Bénin",
-    role: "Personne ressource — Évaluation de projet",
+    role: "Personne ressource - Évaluation de projet",
     desc: "Évaluation des indicateurs de base du projet « Leadership féminin dans la vaccination » au Bénin.",
   },
   {
     period: "01/2025 – 03/2025",
-    org: "Prof. Alain Babatounde (UEMOA)",
+    org: "UEMOA",
     role: "Assistant de recherche",
     desc: "Projet « Diagnostic pays pour la Côte d'Ivoire » : collecte, analyse et rédaction de rapports.",
   },
   {
     period: "11/2024 – 12/2024",
     org: "BACOS AFRIC SARL",
-    role: "Consultant associé — Évaluation finale",
+    role: "Consultant associé - Évaluation finale",
     desc: "Évaluation finale du Projet PAVPHA (Périmètres Hydro-Agricoles), de la digitalisation à la rédaction du rapport.",
   },
   {
     period: "Depuis 12/2024",
     org: "LABEF, Université d'Abomey-Calavi (J-PAL)",
-    role: "Assistant de recherche — Essai contrôlé randomisé",
+    role: "Assistant de recherche - Essai contrôlé randomisé",
     desc: "Projet « Social Origins and Mathematical Performance in Benin », financé par J-PAL.",
   },
   {
