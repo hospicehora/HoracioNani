@@ -1,89 +1,219 @@
+/* ============================================================
+   DESIGN SYSTEM — Horacio NANI Portfolio
+   ============================================================ */
+
+/* ---- Raw palette ---- */
 :root {
-  --ink: #1b2a4a;
-  --ink-soft: #51596b;
-  --paper: #f2ece0;
-  --paper-deep: #e9e1cc;
-  --clay: #c1623d;
-  --gold: #a9842c;
-  --line: #cfc4a4;
-  --white: #fcfaf4;
+  /* Navy scale */
+  --navy-950: #060C18;
+  --navy-900: #0C1524;
+  --navy-800: #101E35;
+  --navy-700: #172642;
+  --navy-600: #1E3058;
+  --navy-500: #2A4070;
 
-  --font-display: "Fraunces", serif;
-  --font-body: "Work Sans", sans-serif;
-  --font-mono: "IBM Plex Mono", monospace;
-  --font-accent: "Space Grotesk", sans-serif;
+  /* Cream scale */
+  --cream-50:  #FDFCF9;
+  --cream-100: #F7F2E8;
+  --cream-200: #EDE5D2;
+  --cream-300: #DDD2B8;
+  --cream-400: #CAB992;
 
-  --container: 1180px;
+  /* Terracotta */
+  --terra-300: #E07B55;
+  --terra-400: #D06640;
+  --terra-500: #C15330;
+  --terra-600: #A84424;
+
+  /* Gold */
+  --gold-300: #C9A845;
+  --gold-400: #B8923A;
+  --gold-500: #9E7A28;
+
+  /* ---- Semantic tokens ---- */
+  /* Backgrounds */
+  --bg:           var(--cream-100);
+  --bg-alt:       var(--cream-200);
+  --bg-surface:   var(--cream-50);
+  --bg-card:      #FFFFFF;
+  --bg-dark:      var(--navy-800);
+  --bg-dark-deep: var(--navy-900);
+
+  /* Text */
+  --text:         var(--navy-950);
+  --text-2:       #3D4F6B;
+  --text-3:       #7080A0;
+  --text-inv:     var(--cream-50);
+  --text-inv-2:   rgba(253, 252, 249, 0.60);
+
+  /* Accent */
+  --accent:         var(--terra-500);
+  --accent-hover:   var(--terra-600);
+  --accent-light:   rgba(193, 83, 48, 0.09);
+  --accent-2:       var(--gold-400);
+  --accent-2-light: rgba(184, 146, 58, 0.12);
+
+  /* Borders */
+  --border:       var(--cream-300);
+  --border-soft:  var(--cream-200);
+  --border-dark:  rgba(253, 252, 249, 0.10);
+
+  /* ---- Typography ---- */
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body:    "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-mono:    "JetBrains Mono", "Fira Code", monospace;
+  --font-accent:  "Space Grotesk", system-ui, sans-serif;
+
+  /* Type scale */
+  --text-xs:   0.6875rem;    /* 11px */
+  --text-sm:   0.8125rem;    /* 13px */
+  --text-base: 0.9375rem;    /* 15px */
+  --text-md:   1.0625rem;    /* 17px */
+  --text-lg:   1.25rem;      /* 20px */
+  --text-xl:   1.5rem;       /* 24px */
+  --text-2xl:  1.875rem;     /* 30px */
+  --text-3xl:  2.25rem;      /* 36px */
+  --text-4xl:  3rem;         /* 48px */
+  --text-5xl:  3.75rem;      /* 60px */
+
+  /* Line heights */
+  --leading-tight:  1.15;
+  --leading-snug:   1.35;
+  --leading-normal: 1.65;
+  --leading-loose:  1.85;
+
+  /* Letter spacing */
+  --tracking-tight:   -0.025em;
+  --tracking-snug:    -0.015em;
+  --tracking-normal:   0em;
+  --tracking-wide:     0.04em;
+  --tracking-wider:    0.09em;
+  --tracking-widest:   0.15em;
+
+  /* ---- Spacing (8 px grid) ---- */
+  --sp-1:   4px;
+  --sp-2:   8px;
+  --sp-3:   12px;
+  --sp-4:   16px;
+  --sp-5:   20px;
+  --sp-6:   24px;
+  --sp-7:   28px;
+  --sp-8:   32px;
+  --sp-10:  40px;
+  --sp-12:  48px;
+  --sp-14:  56px;
+  --sp-16:  64px;
+  --sp-20:  80px;
+  --sp-24:  96px;
+  --sp-32: 128px;
+
+  /* ---- Border radius ---- */
+  --r-sm:   3px;
+  --r-md:   6px;
+  --r-lg:   12px;
+  --r-xl:   20px;
+  --r-full: 9999px;
+
+  /* ---- Shadows ---- */
+  --shadow-xs: 0 1px 3px rgba(6, 12, 24, 0.06);
+  --shadow-sm: 0 2px 8px  rgba(6, 12, 24, 0.08);
+  --shadow-md: 0 4px 20px rgba(6, 12, 24, 0.10);
+  --shadow-lg: 0 8px 40px rgba(6, 12, 24, 0.13);
+  --shadow-xl: 0 20px 64px rgba(6, 12, 24, 0.16);
+
+  /* ---- Motion ---- */
+  --ease-out:    cubic-bezier(0.0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --fast:  150ms;
+  --base:  240ms;
+  --slow:  380ms;
+
+  /* ---- Layout ---- */
+  --container:   1160px;
+  --nav-w:       268px;
 }
 
-* {
-  box-sizing: border-box;
-}
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html {
   scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  margin: 0;
-  background: var(--paper);
-  color: var(--ink);
+  background: var(--bg);
+  color: var(--text);
   font-family: var(--font-body);
   font-weight: 400;
-  line-height: 1.6;
+  line-height: var(--leading-normal);
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img, video { max-width: 100%; display: block; }
+
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: var(--leading-tight);
+  color: var(--text);
+  letter-spacing: var(--tracking-snug);
 }
 
 a {
-  color: var(--clay);
+  color: var(--accent);
   text-decoration: none;
+  transition: color var(--fast) var(--ease-out);
 }
+a:hover { color: var(--accent-hover); text-decoration: underline; }
 
-a:hover {
-  text-decoration: underline;
-}
-
-a:focus-visible,
-button:focus-visible,
-summary:focus-visible {
-  outline: 2px solid var(--clay);
+a:focus-visible, button:focus-visible, summary:focus-visible {
+  outline: 2px solid var(--accent);
   outline-offset: 3px;
+  border-radius: var(--r-sm);
 }
 
-h1,
-h2,
-h3 {
-  font-family: var(--font-display);
-  font-weight: 600;
-  margin: 0;
-}
-
-p {
-  margin: 0;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-}
-
+/* ============================================================
+   UTILITY — EYEBROW
+   ============================================================ */
 .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
   font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.12em;
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: var(--tracking-widest);
   text-transform: uppercase;
-  color: var(--clay);
-  margin: 0 0 10px 0;
+  color: var(--accent);
+  margin: 0 0 var(--sp-3) 0;
+}
+.eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 1.5px;
+  background: var(--accent);
+  flex-shrink: 0;
+  border-radius: 2px;
 }
 
+/* ============================================================
+   UTILITY — SECTION
+   ============================================================ */
 .section {
-  padding: 88px 24px;
-  border-bottom: 1px solid var(--line);
+  padding: var(--sp-24) var(--sp-6);
+  border-bottom: 1px solid var(--border-soft);
+  position: relative;
 }
-
-.section:last-of-type {
-  border-bottom: none;
-}
+.section:last-of-type { border-bottom: none; }
 
 .section-inner {
   max-width: var(--container);
@@ -91,17 +221,24 @@ ul {
 }
 
 .section h2 {
-  font-size: clamp(1.6rem, 3vw, 2.1rem);
-  margin-bottom: 36px;
-  color: var(--ink);
+  font-size: clamp(var(--text-2xl), 3.5vw, var(--text-4xl));
+  margin-bottom: var(--sp-10);
+  letter-spacing: -0.03em;
+}
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-  * {
-    animation-duration: 0.001ms !important;
-    transition-duration: 0.001ms !important;
-  }
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
 }
