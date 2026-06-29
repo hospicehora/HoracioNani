@@ -1,50 +1,95 @@
+/* ---- Dark section ---- */
 .section {
-  background: var(--ink);
-  color: var(--white);
-  max-width: none;
+  background: var(--bg-dark);
+  color: var(--text-inv);
   border-bottom: none;
 }
 
 .heading {
-  color: var(--white);
+  color: var(--text-inv);
 }
 
 .eyebrow {
-  color: var(--gold) !important;
+  color: var(--accent-2) !important;
+}
+.eyebrow::before {
+  background: var(--accent-2) !important;
 }
 
+/* ---- Grid ---- */
 .grid {
-  display: flex;
-  gap: 60px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--sp-2);
+  margin-bottom: var(--sp-12);
 }
 
-.label {
+/* ---- Contact card ---- */
+.card {
+  padding: var(--sp-6) var(--sp-6);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--r-lg);
+  transition:
+    background var(--base) var(--ease-out),
+    border-color var(--base) var(--ease-out);
+}
+.card:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+.cardLabel {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: var(--text-xs);
   text-transform: uppercase;
-  color: rgba(252, 250, 244, 0.5);
-  margin-bottom: 6px;
+  letter-spacing: var(--tracking-widest);
+  color: var(--text-inv-2);
+  margin-bottom: var(--sp-2);
 }
 
-.link {
-  color: var(--white);
-  border-bottom: 1px solid rgba(252, 250, 244, 0.3);
+.cardValue {
+  font-family: var(--font-accent);
+  font-size: var(--text-base);
+  font-weight: 500;
+  color: var(--text-inv);
+  word-break: break-all;
 }
 
-.link:hover {
-  border-color: var(--gold);
-  color: var(--gold);
-  text-decoration: none;
+.cardLink {
+  font-family: var(--font-accent);
+  font-size: var(--text-base);
+  font-weight: 500;
+  color: var(--text-inv) !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid rgba(255,255,255,0.20);
+  transition:
+    color var(--fast) var(--ease-out),
+    border-color var(--fast) var(--ease-out);
+  display: inline;
+}
+.cardLink:hover {
+  color: var(--accent-2) !important;
+  border-color: var(--accent-2);
+  text-decoration: none !important;
 }
 
-.white {
-  color: var(--white);
-}
-
+/* ---- Footer line ---- */
 .foot {
-  margin-top: 40px;
+  padding-top: var(--sp-8);
+  border-top: 1px solid var(--border-dark);
   font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: rgba(252, 250, 244, 0.45);
+  font-size: var(--text-xs);
+  color: rgba(253, 252, 249, 0.30);
+  letter-spacing: var(--tracking-wide);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+}
+
+.footAccent {
+  color: var(--accent-2);
+  opacity: 0.7;
 }
