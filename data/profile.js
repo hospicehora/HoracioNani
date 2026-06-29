@@ -254,7 +254,7 @@ export const publications = {
     },
     {
       text:
-        "Ahogni, I.B., Agbla, M., Agboho, P., et al. Impact of Preventive Strategies in Malaria Control in Children Under 5 Years Old in Sèmè-Podji in Southern Benin. (en cours de publication)",
+        "Ahogni, I. B., Agbla, M., Agboho, P., Azondekon, R., Koudenoukpo, S., Anagonou, R., Sominahouin, A., Gnanvi, J., Nani, H., Padonou, G., Houtoukpè, A., & Akogbéto, M. C. (2020). Impact of Preventive Strategies in Malaria Control in Children Under 5 Years Old in Sèmè-Podji in Southern Benin. Scientific Journal of Biology & Life Sciences, 1(3). SJBLS.MS.ID.000513.",
     },
   ],
   conferences: [
