@@ -1,38 +1,69 @@
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  margin-bottom: 8px;
+  gap: var(--sp-10) var(--sp-14);
+  margin-bottom: var(--sp-10);
 }
 
 @media (max-width: 720px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
+  .grid { grid-template-columns: 1fr; gap: var(--sp-8); }
 }
 
+/* ---- Sub-heading ---- */
 .subhead {
-  font-size: 0.95rem;
-  font-family: var(--font-mono);
+  font-family: var(--font-accent);
+  font-size: var(--text-xs);
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: var(--ink-soft);
-  font-weight: 500;
-  margin-bottom: 12px;
+  letter-spacing: var(--tracking-widest);
+  color: var(--text-3);
+  margin-bottom: var(--sp-4);
+  padding-bottom: var(--sp-2);
+  border-bottom: 1px solid var(--border-soft);
 }
 
+/* ---- Tags ---- */
 .tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: var(--sp-2);
 }
 
 .tag {
-  font-family: var(--font-mono);
-  font-size: 0.76rem;
-  background: var(--white);
-  border: 1px solid var(--line);
-  padding: 7px 13px;
-  border-radius: 2px;
-  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-2);
+  padding: var(--sp-2) var(--sp-4);
+  border-radius: var(--r-full);
+  box-shadow: var(--shadow-xs);
+  transition:
+    background var(--fast) var(--ease-out),
+    border-color var(--fast) var(--ease-out),
+    color var(--fast) var(--ease-out),
+    transform var(--fast) var(--ease-out);
+  cursor: default;
 }
+.tag:hover {
+  background: var(--accent-light);
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+/* Affiliations (slightly different style) */
+.tagAffil {
+  composes: tag;
+  background: var(--accent-2-light);
+  border-color: var(--cream-300);
+  color: var(--text-2);
+}
+.tagAffil:hover {
+  background: var(--accent-2-light);
+  border-color: var(--accent-2);
+  color: var(--accent-2);
+}
+
+.affiliRow { margin-top: var(--sp-10); }
