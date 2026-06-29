@@ -9,7 +9,7 @@ export default function Gallery() {
   const [active, setActive] = useState(null);
 
   return (
-    <section id="galerie" className="section">
+    <section id="galerie" className={`section ${styles.section}`}>
       <div className="section-inner">
         <p className="eyebrow">En images</p>
         <h2 className={styles.title}>Galerie</h2>
@@ -54,7 +54,7 @@ export default function Gallery() {
           >
             ✕
           </button>
-          <div className={styles.lightboxInner}>
+          <div className={styles.lightboxInner} onClick={(e) => e.stopPropagation()}>
             <Image
               src={active.src}
               alt={active.alt}
