@@ -242,6 +242,10 @@ export const publications = {
   journals: [
     {
       text:
+        "Soglo, M. A. G., Hekponhoue, S., Nani, H., & Lafounlou, T. D. (2026). Does Economic Integration Facilitate the Professional Integration of Young People in the WAEMU zone? African Journal of Business and Economic Research, 21(2), 51–72. https://doi.org/10.31920/1750-4562/2026/v21n2a3",
+    },
+    {
+      text:
         "NANI, H., KOGBEDJI, U.S., FASSINOU, J., FIAMOHE, R., IGUE, C.B. (2024). Autonomisation des femmes résidant en milieu rural au Sud-Bénin : mise en évidence du rôle de l'inclusion financière. Actes des JSEB 2024, p. 49.",
     },
     {
