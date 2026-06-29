@@ -242,7 +242,8 @@ export const publications = {
   journals: [
     {
       text:
-        "Soglo, M. A. G., Hekponhoue, S., Nani, H., & Lafounlou, T. D. (2026). Does Economic Integration Facilitate the Professional Integration of Young People in the WAEMU zone? African Journal of Business and Economic Research, 21(2), 51–72. https://doi.org/10.31920/1750-4562/2026/v21n2a3",
+        "Soglo, M. A. G., Hekponhoue, S., Nani, H., & Lafounlou, T. D. (2026). Does Economic Integration Facilitate the Professional Integration of Young People in the WAEMU zone? African Journal of Business and Economic Research, 21(2), 51–72.",
+      url: "https://doi.org/10.31920/1750-4562/2026/v21n2a3",
     },
     {
       text:
@@ -251,10 +252,12 @@ export const publications = {
     {
       text:
         "Affo, M.A., Dansou, J., Acotcheou, E.P., Zinsou, Z.J., Nani, H., Ligan, E. (2025). Impact of Covid-19 on the Economic Situation of Women in the Non-Formal Sector in Southern Benin. International Journal of Humanities and Social Science, 15, 390-406.",
+      url: "https://doi.org/10.30845/ijhss.v15p34",
     },
     {
       text:
         "Ahogni, I. B., Agbla, M., Agboho, P., Azondekon, R., Koudenoukpo, S., Anagonou, R., Sominahouin, A., Gnanvi, J., Nani, H., Padonou, G., Houtoukpè, A., & Akogbéto, M. C. (2020). Impact of Preventive Strategies in Malaria Control in Children Under 5 Years Old in Sèmè-Podji in Southern Benin. Scientific Journal of Biology & Life Sciences, 1(3). SJBLS.MS.ID.000513.",
+      url: "https://irispublishers.com/sjbls/fulltext/impact-of-preventive-strategies-in-malaria-control-in-children-under-5-years-old-in-s%C3%A8m%C3%A8.ID.000513.php",
     },
   ],
   conferences: [
