@@ -364,3 +364,13 @@ export const languages = [
   { name: "Français", level: "C2 — Excellent", pct: 100 },
   { name: "Anglais", level: "B2 — Bon", pct: 65 },
 ];
+
+// Pour ajouter une photo : dépose le fichier dans /public, puis ajoute une
+// entrée ici avec son chemin (ex: "/terrain-1.jpg") et une légende.
+export const galleryImages = [
+  {
+    src: "/Horacio_NANI.png",
+    alt: "Horacio NANI",
+    caption: "Horacio NANI",
+  },
+];
