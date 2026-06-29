@@ -13,33 +13,27 @@ export default function Domains() {
             <h3 className={styles.subhead}>Domaines de recherche</h3>
             <div className={styles.tags}>
               {researchDomains.map((d) => (
-                <span key={d} className={styles.tag}>
-                  {d}
-                </span>
+                <span key={d} className={styles.tag}>{d}</span>
               ))}
             </div>
           </div>
           <div>
-            <h3 className={styles.subhead}>Domaines d&apos;expertise sectorielle</h3>
+            <h3 className={styles.subhead}>Expertise sectorielle</h3>
             <div className={styles.tags}>
               {sectorDomains.map((d) => (
-                <span key={d} className={styles.tag}>
-                  {d}
-                </span>
+                <span key={d} className={styles.tag}>{d}</span>
               ))}
             </div>
           </div>
         </div>
 
-        <h3 className={styles.subhead} style={{ marginTop: 40 }}>
-          Réseaux &amp; affiliations professionnelles
-        </h3>
-        <div className={styles.tags}>
-          {affiliations.map((a) => (
-            <span key={a} className={styles.tag}>
-              {a}
-            </span>
-          ))}
+        <div className={styles.affiliRow}>
+          <h3 className={styles.subhead}>Réseaux &amp; affiliations professionnelles</h3>
+          <div className={styles.tags}>
+            {affiliations.map((a) => (
+              <span key={a} className={`${styles.tag} ${styles.tagAffil}`}>{a}</span>
+            ))}
+          </div>
         </div>
       </div>
     </section>
