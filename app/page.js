@@ -6,6 +6,7 @@ import Experience from "@/components/Experience";
 import Publications from "@/components/Publications";
 import Certifications from "@/components/Certifications";
 import Skills from "@/components/Skills";
+import Gallery from "@/components/Gallery";
 import Contact from "@/components/Contact";
 import styles from "./page.module.css";
 
@@ -21,6 +22,7 @@ export default function Home() {
         <Publications />
         <Certifications />
         <Skills />
+        <Gallery />
         <Contact />
       </main>
     </div>
