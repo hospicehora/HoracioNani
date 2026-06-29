@@ -8,12 +8,12 @@ export default function Certifications() {
         <p className="eyebrow">Formation continue</p>
         <h2>Certifications professionnelles</h2>
 
-        <div className={styles.list}>
+        <div className={styles.grid}>
           {certifications.map((c, i) => (
-            <div className={styles.item} key={i}>
-              <span className={styles.year}>{c.year}</span> — {c.title}
-              <br />
-              <span className={styles.org}>{c.org}</span>
+            <div className={styles.card} key={i}>
+              <span className={styles.year}>{c.year}</span>
+              <p className={styles.title}>{c.title}</p>
+              <p className={styles.org}>{c.org}</p>
             </div>
           ))}
         </div>
