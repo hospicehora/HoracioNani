@@ -11,6 +11,7 @@ const links = [
   { href: "#publications", label: "Publications" },
   { href: "#certifications", label: "Certifications" },
   { href: "#competences", label: "Compétences" },
+  { href: "#galerie", label: "Galerie" },
   { href: "#contact", label: "Contact" },
 ];
 
