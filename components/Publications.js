@@ -1,6 +1,25 @@
 import styles from "./Publications.module.css";
 import { publications } from "@/data/profile";
 
+function Group({ title, items, numbered = true }) {
+  return (
+    <div className={styles.group}>
+      <div className={styles.groupHeader}>
+        <h3 className={styles.groupTitle}>{title}</h3>
+        {numbered && items.length > 0 && (
+          <span className={styles.groupCount}>{items.length}</span>
+        )}
+      </div>
+      {items.map((p, i) => (
+        <div className={styles.item} key={i}>
+          {numbered && <span className={styles.itemNum}>{i + 1}.</span>}
+          <span>{typeof p === "string" ? p : p.text}</span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export default function Publications() {
   return (
     <section id="publications" className="section">
@@ -8,38 +27,18 @@ export default function Publications() {
         <p className="eyebrow">Diffusion scientifique</p>
         <h2>Publications &amp; communications</h2>
 
-        <div className={styles.group}>
-          <h3 className={styles.groupTitle}> Publications </h3>
-          {publications.journals.map((p, i) => (
-            <div className={styles.item} key={i}>
-              {p.text}
-            </div>
-          ))}
-        </div>
+        <Group title="Publications" items={publications.journals} />
+        <Group title="Communications &amp; colloques" items={publications.conferences} />
+        <Group title="Travaux en cours" items={publications.ongoing} numbered={false} />
 
         <div className={styles.group}>
-          <h3 className={styles.groupTitle}>
-            Communications &amp; colloques scientifiques
-          </h3>
-          {publications.conferences.map((p, i) => (
-            <div className={styles.item} key={i}>
-              {p.text}
-            </div>
-          ))}
-        </div>
-
-        <div className={styles.group}>
-          <h3 className={styles.groupTitle}>Travaux en cours</h3>
-          {publications.ongoing.map((p, i) => (
-            <div className={styles.item} key={i}>
-              {p}
-            </div>
-          ))}
-        </div>
-
-        <div className={styles.group}>
-          <h3 className={styles.groupTitle}>Distinction</h3>
-          <div className={styles.item}>{publications.distinction}</div>
+          <div className={styles.groupHeader}>
+            <h3 className={styles.groupTitle}>Distinction</h3>
+          </div>
+          <div className={styles.distinction}>
+            <span className={styles.distinctionIcon}>🏆</span>
+            <span>{publications.distinction}</span>
+          </div>
         </div>
       </div>
     </section>
