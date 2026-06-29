@@ -9,7 +9,7 @@ export default function Publications() {
         <h2>Publications &amp; communications</h2>
 
         <div className={styles.group}>
-          <h3 className={styles.groupTitle}>Revues académiques</h3>
+          <h3 className={styles.groupTitle}> Publications </h3>
           {publications.journals.map((p, i) => (
             <div className={styles.item} key={i}>
               {p.text}
