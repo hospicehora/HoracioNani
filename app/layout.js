@@ -11,24 +11,14 @@ export const metadata = {
   },
   description: profile.tagline,
   keywords: [
-    "Horacio NANI",
-    "Économiste",
-    "Statisticien",
-    "Évaluation d'impact",
-    "Suivi-évaluation",
-    "M&E",
-    "Bénin",
-    "Université d'Abomey-Calavi",
-    "Inclusion financière",
-    "Développement économique",
-    "Afrique de l'Ouest",
+    "Horacio NANI", "Économiste", "Statisticien", "Évaluation d'impact",
+    "Suivi-évaluation", "M&E", "Bénin", "Université d'Abomey-Calavi",
+    "Inclusion financière", "Développement économique", "Afrique de l'Ouest",
   ],
   authors: [{ name: profile.name }],
   creator: profile.name,
   openGraph: {
-    type: "profile",
-    locale: "fr_FR",
-    url: siteUrl,
+    type: "profile", locale: "fr_FR", url: siteUrl,
     siteName: `${profile.name} — Portfolio`,
     title: `${profile.name} — ${profile.role}`,
     description: profile.tagline,
@@ -38,13 +28,8 @@ export const metadata = {
     title: `${profile.name} — ${profile.role}`,
     description: profile.tagline,
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
-  alternates: {
-    canonical: siteUrl,
-  },
+  robots: { index: true, follow: true },
+  alternates: { canonical: siteUrl },
 };
 
 export default function RootLayout({ children }) {
@@ -56,17 +41,10 @@ export default function RootLayout({ children }) {
     description: profile.tagline,
     email: `mailto:${profile.email}`,
     telephone: profile.phone,
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Abomey-Calavi",
-      addressCountry: "BJ",
-    },
+    address: { "@type": "PostalAddress", addressLocality: "Abomey-Calavi", addressCountry: "BJ" },
     nationality: profile.nationality,
     url: siteUrl,
-    alumniOf: {
-      "@type": "CollegeOrUniversity",
-      name: "Université d'Abomey-Calavi",
-    },
+    alumniOf: { "@type": "CollegeOrUniversity", name: "Université d'Abomey-Calavi" },
     knowsLanguage: ["French", "English"],
   };
 
@@ -74,13 +52,9 @@ export default function RootLayout({ children }) {
     <html lang="fr">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
       </head>
