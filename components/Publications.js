@@ -10,12 +10,29 @@ function Group({ title, items, numbered = true }) {
           <span className={styles.groupCount}>{items.length}</span>
         )}
       </div>
-      {items.map((p, i) => (
-        <div className={styles.item} key={i}>
-          {numbered && <span className={styles.itemNum}>{i + 1}.</span>}
-          <span>{typeof p === "string" ? p : p.text}</span>
-        </div>
-      ))}
+      {items.map((p, i) => {
+        const text = typeof p === "string" ? p : p.text;
+        const url  = typeof p === "object" ? p.url : null;
+        return (
+          <div className={styles.item} key={i}>
+            {numbered && <span className={styles.itemNum}>{i + 1}.</span>}
+            <div className={styles.itemBody}>
+              <span>{text}</span>
+              {url && (
+                <a
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.itemLink}
+                  aria-label="Consulter l'article"
+                >
+                  Consulter →
+                </a>
+              )}
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 }
