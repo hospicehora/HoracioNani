@@ -72,9 +72,9 @@
 }
 
 .ledgerNum {
-  font-family: var(--font-mono);
+  font-family: var(--font-accent);
   font-size: 1.6rem;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--clay);
   display: block;
 }
