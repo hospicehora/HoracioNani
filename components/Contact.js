@@ -9,29 +9,32 @@ export default function Contact() {
         <h2 className={styles.heading}>Contact</h2>
 
         <div className={styles.grid}>
-          <div>
-            <div className={styles.label}>Email</div>
-            <a href={`mailto:${profile.email}`} className={styles.link}>
+          <div className={styles.card}>
+            <p className={styles.cardLabel}>Email</p>
+            <a href={`mailto:${profile.email}`} className={styles.cardLink}>
               {profile.email}
             </a>
           </div>
-          <div>
-            <div className={styles.label}>Téléphone</div>
+
+          <div className={styles.card}>
+            <p className={styles.cardLabel}>Téléphone</p>
             <a
               href={`tel:${profile.phone.replace(/\s/g, "")}`}
-              className={styles.link}
+              className={styles.cardLink}
             >
               {profile.phone}
             </a>
           </div>
-          <div>
-            <div className={styles.label}>Localisation</div>
-            <span className={styles.white}>{profile.location}</span>
+
+          <div className={styles.card}>
+            <p className={styles.cardLabel}>Localisation</p>
+            <p className={styles.cardValue}>{profile.location}</p>
           </div>
         </div>
 
         <div className={styles.foot}>
-          {profile.name} — {profile.role} · Portfolio professionnel
+          <span>{profile.name} — {profile.role}</span>
+          <span className={styles.footAccent}>Portfolio · {new Date().getFullYear()}</span>
         </div>
       </div>
     </section>
