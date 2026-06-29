@@ -8,8 +8,6 @@
   min-width: 0;
 }
 
-@media (max-width: 900px) {
-  .layout {
-    flex-direction: column;
-  }
+@media (max-width: 960px) {
+  .layout { flex-direction: column; }
 }
